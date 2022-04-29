@@ -1,7 +1,9 @@
 /*
-    Crea un array di 10 oggetti che rappresentano una zucchina, indicando per ognuna varietà, peso e lunghezza.
-    Calcola quanto pesano tutte le zucchine.
+    Crea 10 oggetti che rappresentano una zucchina.
+    Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+    Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 */
+
 const zucchine = [
     {
         varieta: "bolognese",
@@ -55,23 +57,5 @@ const zucchine = [
     }
 ];
 
-
-const totPesoZucchine = weightIn(zucchine);
-console.log('Il peso totale delle zucchine è: ' + totPesoZucchine + 'g');
-
-document.querySelector('h1').innerHTML = 'Il peso totale delle zucchine è: ' + totPesoZucchine + 'g';
-
-
-
-
-
-
-
-function weightIn(struct){
-    let pesoTot = 0;
-
-    for(let i in struct){
-        pesoTot += struct[i].peso;
-    }
-    return pesoTot;
-};
+const zucchineLong = [];
+const zucchineShort = [];
